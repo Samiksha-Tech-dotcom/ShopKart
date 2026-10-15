@@ -1,0 +1,201 @@
+.product-list-page {
+  min-height: 100vh;
+  padding: 40px 60px;
+  background: #f7fbff;
+}
+
+.product-list-page h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 36px;
+  color: #263238;
+}
+
+/* SEARCH + FILTER */
+
+.product-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.product-search {
+  width: 430px;
+}
+
+.search-box {
+  height: 52px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 18px;
+  background: white;
+  border: 1px solid #d5e3ec;
+  border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.search-icon {
+  font-size: 25px;
+  color: #6faec7;
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  background: transparent;
+  color: #263238;
+}
+
+.search-box input::placeholder {
+  color: #9aaeb7;
+}
+
+/* PRODUCT GRID */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+/* PRODUCT CARD */
+
+.product-card {
+  background: white;
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+  transition: 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.product-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: contain;
+  border-radius: 14px;
+  background: #f1f7fa;
+}
+
+.product-card h2 {
+  font-size: 19px;
+  margin: 15px 0 8px;
+  color: #263238;
+}
+
+.product-card p {
+  margin: 6px 0;
+  color: #667780;
+}
+
+.product-card button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 11px;
+  border: none;
+  border-radius: 22px;
+  background: #9fd3e5;
+  color: #183642;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.product-card button:hover {
+  background: #7fc1d8;
+}
+
+/* STATES */
+
+.product-state {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 20px;
+  color: #657780;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .product-list-page {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 750px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-controls {
+    flex-direction: column;
+  }
+
+  .product-search {
+    width: 90%;
+  }
+}
+
+@media (max-width: 500px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-list-page {
+    padding: 20px;
+  }
+}
+.category-filter {
+  height: 52px;
+  min-width: 190px;
+  padding: 0 18px;
+  border: 1px solid #d5e3ec;
+  border-radius: 30px;
+  background: white;
+  color: #263238;
+  outline: none;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.category-filter:focus {
+  border-color: #91c8df;
+}
+
+.category-filter:hover {
+  border-color: #91c8df;
+}
+.back-button {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  border: none;
+  background: transparent;
+  color: #5d9fbd;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 20px;
+  transition: 0.2s;
+}
+
+.back-button:hover {
+  background: #eaf6fb;
+  color: #3f819f;
+}

@@ -1,0 +1,237 @@
+
+/* ===== ShoppyMania Payment ===== */
+
+.payment-page {
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 45px 22px 65px;
+    background: linear-gradient(145deg, #f3f9ff 0%, #edf6fc 100%);
+    color: #24364b;
+    font-family: Arial, sans-serif;
+}
+
+.payment-container {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.payment-back-btn {
+    margin-bottom: 28px;
+    padding: 10px 15px;
+    border: 1px solid #dce8f3;
+    border-radius: 12px;
+    background: #fff;
+    color: #526981;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.payment-back-btn:hover:not(:disabled) {
+    background: #e5f3ff;
+}
+
+.payment-back-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.payment-page h1 {
+    margin: 0;
+    color: #1c3552;
+    font-size: clamp(29px, 5vw, 38px);
+    letter-spacing: -1px;
+}
+
+.payment-subtitle {
+    margin: 12px 0 27px;
+    color: #8192a7;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.payment-progress {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 28px;
+}
+
+.payment-progress span {
+    padding: 10px 15px;
+    border: 1px solid #e2eaf2;
+    border-radius: 30px;
+    background: #fff;
+    color: #8998a9;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.payment-progress .completed {
+    border-color: #c6e8d6;
+    background: #e7f8ef;
+    color: #32815a;
+}
+
+.payment-progress .active {
+    border-color: #bce3fa;
+    background: #dff2ff;
+    color: #226b99;
+}
+
+/* Main payment card */
+
+.payment-card {
+    padding: 38px;
+    border: 1px solid #dce9f5;
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0 18px 50px rgba(52, 91, 128, 0.08);
+    text-align: center;
+}
+
+.payment-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 76px;
+    height: 76px;
+    margin: 0 auto 22px;
+    border-radius: 22px;
+    background: #e9f6ff;
+    font-size: 34px;
+}
+
+.payment-card h2 {
+    margin: 0;
+    color: #263e59;
+    font-size: 24px;
+}
+
+.payment-description {
+    max-width: 420px;
+    margin: 14px auto 25px;
+    color: #8192a7;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* Payment error */
+
+.payment-error {
+    margin-bottom: 20px;
+    padding: 14px 16px;
+    border: 1px solid #f2caca;
+    border-radius: 12px;
+    background: #fff3f3;
+    color: #b83b3b;
+    font-size: 13px;
+    line-height: 1.6;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+/* Security information */
+
+.payment-security-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    margin: 25px 0;
+    padding: 18px;
+    border: 1px solid #e2edf6;
+    border-radius: 14px;
+    background: #f7fbff;
+    text-align: left;
+}
+
+.payment-security-note > span {
+    font-size: 22px;
+}
+
+.payment-security-note strong {
+    color: #405671;
+    font-size: 13px;
+}
+
+.payment-security-note p {
+    margin: 7px 0 0;
+    color: #8a9aad;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* Main action */
+
+.payment-primary-btn {
+    width: 100%;
+    min-height: 53px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 13px;
+    background: #9bd7f5;
+    color: #183a58;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 750;
+    cursor: pointer;
+    box-shadow: 0 7px 16px rgba(99, 174, 216, 0.18);
+    transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
+}
+
+.payment-primary-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    background: #83c9ef;
+    box-shadow: 0 10px 22px rgba(99, 174, 216, 0.24);
+}
+
+.payment-primary-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.65;
+    transform: none;
+    box-shadow: none;
+}
+
+.payment-footer-note {
+    margin: 18px 0 0;
+    color: #9aa7b6;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.payment-brand-note {
+    margin-top: 25px;
+    color: #8a9aad;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    .payment-page {
+        padding: 28px 14px 42px;
+    }
+
+    .payment-card {
+        padding: 28px 19px;
+        border-radius: 19px;
+    }
+
+    .payment-card h2 {
+        font-size: 21px;
+    }
+
+    .payment-progress {
+        gap: 7px;
+    }
+
+    .payment-progress span {
+        padding: 9px 11px;
+        font-size: 11px;
+    }
+
+    .payment-security-note {
+        padding: 14px;
+    }
+}

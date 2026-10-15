@@ -1,0 +1,453 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+
+/* =========================================
+   MAIN SIGNUP PAGE
+========================================= */
+
+.signup-page {
+  width: 100%;
+  min-height: 100vh;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px 20px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  /*
+    Background image
+    Slightly smaller than cover
+  */
+  background-image: url("/shopping-bg.png");
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /*
+    This fills any tiny space around the image
+  */
+  background-color: #c8d8d6;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   COLORED OVERLAY
+========================================= */
+
+.background-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    110deg,
+    rgba(113, 132, 190, 0.60),
+    rgba(91, 193, 185, 0.55)
+  );
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   SIGNUP CARD
+========================================= */
+
+.signup-card {
+  position: relative;
+
+  z-index: 2;
+
+  width: 530px;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  padding: 45px 65px 48px;
+
+  border-radius: 7px;
+
+  box-shadow:
+    0 18px 50px rgba(0, 0, 0, 0.20);
+
+  animation: cardAppear 0.6s ease forwards;
+}
+
+
+/* =========================================
+   CARD ANIMATION
+========================================= */
+
+@keyframes cardAppear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.signup-card h1 {
+  text-align: center;
+
+  font-size: 22px;
+
+  font-weight: 700;
+
+  color: #151515;
+
+  margin-bottom: 36px;
+
+  letter-spacing: 0.2px;
+
+  background: transparent;
+}
+
+
+/* =========================================
+   INPUT BOX
+========================================= */
+
+.input-box {
+  width: 100%;
+
+  height: 45px;
+
+  margin-bottom: 16px;
+
+  background: #ffffff;
+
+  border: 1px solid #dddddd;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* =========================================
+   INPUT
+========================================= */
+
+.input-box input {
+  width: 100%;
+
+  height: 100%;
+
+  border: none;
+
+  outline: none;
+
+  padding: 0 15px;
+
+  background: #ffffff;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 13px;
+
+  color: #333333;
+}
+
+
+.input-box input::placeholder {
+  color: #9d9d9d;
+}
+
+
+/* =========================================
+   INPUT FOCUS
+========================================= */
+
+.input-box:focus-within {
+  border-color: #72c9c0;
+
+  box-shadow:
+    0 0 0 2px rgba(114, 201, 192, 0.12);
+}
+
+
+/* =========================================
+   PASSWORD INPUT
+========================================= */
+
+.password-box {
+  position: relative;
+}
+
+
+.password-box input {
+  padding-right: 50px;
+}
+
+
+/* Show / Hide button */
+
+.password-box button {
+  position: absolute;
+
+  right: 12px;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 28px;
+
+  height: 28px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: none;
+
+  background: transparent;
+
+  color: #777777;
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  padding: 0;
+}
+
+
+.password-box button:hover {
+  color: #333333;
+}
+
+
+/* =========================================
+   TERMS
+========================================= */
+
+.terms {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 8px;
+
+  margin-bottom: 30px;
+
+  background: transparent;
+}
+
+
+.terms input {
+  width: 13px;
+
+  height: 13px;
+
+  flex-shrink: 0;
+
+  cursor: pointer;
+
+  accent-color: #65cfc0;
+}
+
+
+.terms label {
+  font-size: 11px;
+
+  color: #555555;
+
+  cursor: pointer;
+
+  background: transparent;
+}
+
+
+.terms span {
+  text-decoration: underline;
+
+  font-weight: 500;
+
+  background: transparent;
+}
+
+
+/* =========================================
+   SIGN UP BUTTON
+========================================= */
+
+.signup-btn {
+  width: 100%;
+
+  height: 45px;
+
+  border: none;
+
+  cursor: pointer;
+
+  color: #ffffff;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.5px;
+
+  background: linear-gradient(
+    100deg,
+    #8c9de7,
+    #62d7c5
+  );
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.signup-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(85, 180, 175, 0.28);
+}
+
+
+.signup-btn:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================
+   LOGIN TEXT
+========================================= */
+
+.login-link {
+  text-align: center;
+
+  margin-top: 68px;
+
+  font-size: 11px;
+
+  color: #555555;
+
+  background: transparent;
+}
+
+
+.login-link a {
+  color: #111111;
+
+  font-weight: 600;
+
+  text-decoration: underline;
+
+  background: transparent;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .signup-page {
+    background-size: cover;
+  }
+
+  .signup-card {
+    width: 530px;
+  }
+}
+
+
+/* =========================================
+   SMALL TABLET
+========================================= */
+
+@media (max-width: 700px) {
+
+  .signup-page {
+    padding: 30px 20px;
+
+    background-size: cover;
+  }
+
+  .signup-card {
+    width: 90%;
+
+    padding: 40px 45px 45px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+  .signup-page {
+    padding: 25px 15px;
+
+    background-size: cover;
+
+    background-position: center;
+  }
+
+  .signup-card {
+    width: 100%;
+
+    padding: 35px 25px 35px;
+
+    border-radius: 6px;
+  }
+
+  .signup-card h1 {
+    font-size: 20px;
+
+    margin-bottom: 30px;
+  }
+
+  .input-box {
+    height: 45px;
+  }
+
+  .login-link {
+    margin-top: 45px;
+  }
+}

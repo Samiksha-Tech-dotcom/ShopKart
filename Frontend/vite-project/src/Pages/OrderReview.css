@@ -1,0 +1,362 @@
+
+/* ===== ShoppyMania Order Review ===== */
+
+.order-review-page,
+.review-message-page {
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 45px 22px 65px;
+    background: linear-gradient(145deg, #f3f9ff 0%, #edf6fc 100%);
+    color: #24364b;
+    font-family: Arial, sans-serif;
+}
+
+.review-container {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.review-back-btn {
+    margin-bottom: 28px;
+    padding: 10px 15px;
+    border: 1px solid #dce8f3;
+    border-radius: 12px;
+    background: #fff;
+    color: #526981;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.review-back-btn:hover {
+    background: #e5f3ff;
+}
+
+.order-review-page h1 {
+    margin: 0;
+    color: #1c3552;
+    font-size: clamp(29px, 5vw, 38px);
+    letter-spacing: -1px;
+}
+
+.review-subtitle {
+    margin: 12px 0 27px;
+    color: #8192a7;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.review-progress {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 28px;
+}
+
+.review-progress span {
+    padding: 10px 15px;
+    border: 1px solid #e2eaf2;
+    border-radius: 30px;
+    background: #fff;
+    color: #8998a9;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.review-progress .completed {
+    border-color: #c6e8d6;
+    background: #e7f8ef;
+    color: #32815a;
+}
+
+.review-progress .active {
+    border-color: #bce3fa;
+    background: #dff2ff;
+    color: #226b99;
+}
+
+/* Address and order cards */
+
+.review-address-card,
+.review-items-card,
+.review-message-card {
+    margin-bottom: 22px;
+    padding: 30px;
+    border: 1px solid #dce9f5;
+    border-radius: 22px;
+    background: #fff;
+    box-shadow: 0 15px 40px rgba(52, 91, 128, 0.07);
+}
+
+.review-section-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.review-section-heading h2,
+.review-message-card h2 {
+    margin: 0;
+    color: #263e59;
+    font-size: 21px;
+}
+
+.review-section-heading > div > p {
+    margin: 9px 0 0;
+    color: #8a9aad;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.review-edit-btn {
+    flex-shrink: 0;
+    padding: 9px 13px;
+    border: 1px solid #c9e5f7;
+    border-radius: 10px;
+    background: #f0f9ff;
+    color: #2877a8;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.review-edit-btn:hover {
+    background: #dff2ff;
+}
+
+.review-address-details {
+    margin-top: 24px;
+    padding: 20px;
+    border: 1px solid #e8f0f7;
+    border-radius: 14px;
+    background: #f8fbfe;
+}
+
+.review-address-details p {
+    margin: 8px 0;
+    color: #687d94;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.review-address-details .review-customer-name {
+    margin-top: 0;
+    color: #243e59;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* Individual products */
+
+.review-items-list {
+    margin-top: 25px;
+}
+
+.review-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 20px 0;
+    border-bottom: 1px solid #edf1f6;
+}
+
+.review-item-image {
+    width: 82px;
+    height: 82px;
+    flex-shrink: 0;
+    object-fit: contain;
+    padding: 7px;
+    box-sizing: border-box;
+    border: 1px solid #edf1f6;
+    border-radius: 14px;
+    background: #f8fbfe;
+}
+
+.review-item-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.review-item-info h3 {
+    margin: 0 0 9px;
+    color: #30465f;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+
+.review-item-info p {
+    margin: 5px 0;
+    color: #8998a9;
+    font-size: 13px;
+}
+
+.review-item-total {
+    flex-shrink: 0;
+    margin: 0;
+    color: #263e59;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+/* Subtotal and payment button */
+
+.review-subtotal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-top: 24px;
+    padding: 20px;
+    border-radius: 14px;
+    background: #f0f8ff;
+    color: #405671;
+    font-size: 15px;
+}
+
+.review-subtotal strong {
+    color: #1c3552;
+    font-size: 21px;
+}
+
+.review-delivery-note {
+    margin: 15px 0 20px;
+    color: #8a9aad;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.review-primary-btn {
+    width: 100%;
+    min-height: 50px;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 13px;
+    background: #9bd7f5;
+    color: #183a58;
+    font-size: 14px;
+    font-weight: 750;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.review-primary-btn:hover {
+    transform: translateY(-1px);
+    background: #83c9ef;
+    box-shadow: 0 8px 18px rgba(99, 174, 216, 0.2);
+}
+
+.review-footer-note {
+    margin-top: 25px;
+    color: #8a9aad;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* Empty, loading, and missing-address states */
+
+.review-message-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.review-message-card {
+    width: 100%;
+    max-width: 430px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.review-message-card > p {
+    margin: 13px 0 24px;
+    color: #8192a7;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Mobile layout */
+
+@media (max-width: 600px) {
+    .order-review-page,
+    .review-message-page {
+        padding: 28px 14px 40px;
+    }
+
+    .review-address-card,
+    .review-items-card,
+    .review-message-card {
+        padding: 22px 17px;
+        border-radius: 17px;
+    }
+
+    .review-section-heading {
+        gap: 12px;
+    }
+
+    .review-section-heading h2 {
+        font-size: 18px;
+    }
+
+    .review-progress {
+        gap: 7px;
+    }
+
+    .review-progress span {
+        padding: 9px 11px;
+        font-size: 11px;
+    }
+
+    .review-address-details {
+        padding: 15px;
+    }
+
+    .review-item {
+        gap: 11px;
+        align-items: flex-start;
+    }
+
+    .review-item-image {
+        width: 65px;
+        height: 65px;
+    }
+
+    .review-item-info h3 {
+        font-size: 13px;
+    }
+
+    .review-item-info p {
+        font-size: 12px;
+    }
+
+    .review-item-total {
+        font-size: 13px;
+    }
+
+    .review-subtotal {
+        padding: 16px;
+    }
+
+    .review-subtotal strong {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 380px) {
+    .review-section-heading {
+        flex-direction: column;
+    }
+
+    .review-edit-btn {
+        align-self: flex-start;
+    }
+
+    .review-item {
+        flex-wrap: wrap;
+    }
+
+    .review-item-total {
+        width: 100%;
+        padding-left: 76px;
+    }
+}
